@@ -1,0 +1,21 @@
+{
+ "manifest_version": 2,
+ "name": "ASPR",
+ "version": "0.0.1",
+ "description": "Shows reviews from selected product only",
+ "short_name": "Amazon Single Product Review",
+ "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>"],
+ "content_scripts": [
+   {
+     "matches": ["https://amazon.com/*"],
+     "css": ["override.css"],
+     "js": ["override.js"]
+   }
+ ],
+ "browser_action": {
+   "default_icon": {
+     "16": "icons/icon16.png",
+     "32": "icons/icon32.png"
+   }
+ }
+}
